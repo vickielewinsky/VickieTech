@@ -1,26 +1,112 @@
-@import "tailwindcss";
+/* Global styles */
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Set a consistent background color for the whole page */
+body {
+  background-color: #40430a; /* Dark greenish background */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #dcdcdc; /* Soft gray for text (not pure white) */
+  box-sizing: border-box; /* Ensures padding and borders are included in width/height calculations */
+  scroll-behavior: smooth; /* Smooth scrolling for navigation links */
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Adjust the navbar background color */
+.navbar {
+  background-color: #333; /* Dark gray navbar */
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 100;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.navList {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  padding: 0;
+}
+
+.navList li {
+  padding: 10px 20px;
+}
+
+.navList a {
+  color: #dcdcdc; /* Soft gray text for navbar links */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.navList a:hover {
+  color: #FFD700; /* Gold color on hover */
+  text-decoration: underline;
+}
+
+/* Make navbar items stack vertically on smaller screens */
+@media (max-width: 768px) {
+  .navList {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navList li {
+    padding: 10px;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Update the footer background color */
+.footer {
+  background-color: #333; /* Dark gray color for the footer */
+  color: #dcdcdc; /* Soft gray footer text */
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Universal section styles */
+section {
+  padding: 50px 0;
+  text-align: center;
+}
+
+/* Optional: Add some margin to the top and bottom of each section */
+section + section {
+  margin-top: 30px;
+}
+
+/* Alternate background color for sections */
+section:nth-child(even) {
+  background-color: #f4f4f4; /* Light gray for even sections */
+}
+
+section:nth-child(odd) {
+  background-color: #ffffff; /* White for odd sections */
+}
+
+/* Style for the skills list */
+.skills-list {
+  list-style-type: none; /* Removes the default bullets */
+  padding: 0; /* Removes default padding */
+  text-align: center; /* Centers the text inside the list */
+  display: flex; /* Display items in a row */
+  justify-content: center; /* Center the items horizontally */
+  flex-wrap: wrap; /* Allows the items to wrap to the next line if needed */
+}
+
+.skills-list li {
+  margin: 10px; /* Adds spacing between the list items */
+  font-size: 1.2rem; /* Adjust the font size if needed */
+}
+
+/* Styling for the header */
+header {
+  margin-bottom: 20px;
+}
+
+/* Styling for the section titles (h2) */
+h2 {
+  font-size: 2rem;
+  color: #333; /* Darker color for section titles */
+  margin-bottom: 20px;
 }
