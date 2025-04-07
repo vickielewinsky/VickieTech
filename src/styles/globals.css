@@ -1,22 +1,22 @@
 /* src/styles/globals.css */
 
-/* Set a consistent background color for the whole page */
+/* Set the background color for the whole page */
 body {
-  background-color: #40430a; /* Dark greenish background */
+  background-color: #ffffff; /* White background across all pages */
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  color: #dcdcdc; /* Default soft gray for text */
+  color: #333333; /* Default text color */
   box-sizing: border-box;
   scroll-behavior: smooth;
-  min-height: 100vh; /* Ensure body takes up full height */
+  min-height: 100vh;
   display: flex;
-  flex-direction: column; /* Use column layout for the whole page */
+  flex-direction: column;
 }
 
 /* Main content should grow to take up available space */
 main {
-  flex-grow: 1; /* Ensure the content takes all available space */
+  flex-grow: 1;
 }
 
 /* Footer styles */
@@ -25,12 +25,12 @@ main {
   color: #dcdcdc;
   text-align: center;
   padding: 20px 0;
-  margin-top: auto; /* Push footer to the bottom */
+  margin-top: auto;
 }
 
 /* Navbar styles */
 .navbar {
-  background-color: #333; /* Dark gray navbar */
+  background-color: #333;
   padding: 10px 20px;
   position: sticky;
   top: 0;
@@ -58,7 +58,7 @@ main {
 }
 
 .navList a:hover {
-  color: #FFD700; /* Gold color on hover */
+  color: #FFD700;
   text-decoration: underline;
 }
 
@@ -100,4 +100,125 @@ h2 {
   color: #222;
   margin-bottom: 20px;
   font-weight: 700;
+}
+
+/* Skills Page Styles */
+.skills-page {
+  padding: 50px;
+  text-align: center;
+}
+
+.skills-title {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.skills-intro {
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+}
+
+.skills-list {
+  margin-top: 40px;
+}
+
+.skills-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 30px;
+  font-size: 1.2rem;
+}
+
+.skills-item.reverse {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+.skills-item h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.skills-item p,
+.skills-item ul {
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+  font-size: 1.2rem;
+}
+
+.skills-item ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skills-item li {
+  margin: 10px 0;
+}
+
+/* Contact Page Styles */
+.contact-page {
+  padding: 50px;
+  text-align: center;
+}
+
+.contact-title {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.contact-info {
+  margin-top: 20px;
+}
+
+.contact-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-info li {
+  margin: 15px 0;
+  font-size: 1.2rem;
+}
+
+/* Contact page link styles */
+.contact-info a {
+  color: #0073b1; /* LinkedIn blue color */
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer; /* Add this to change the cursor to a hand */
+}
+
+.contact-info a:hover {
+  color: #005582; /* Darker blue on hover */
+  text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .skills-item {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .skills-item.reverse {
+    flex-direction: column;
+  }
+
+  .skills-item h2 {
+    font-size: 1.8rem;
+  }
+
+  .skills-item p,
+  .skills-item ul {
+    font-size: 1rem;
+  }
+
+  .contact-info li {
+    font-size: 1rem;
+  }
 }

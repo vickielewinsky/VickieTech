@@ -1,8 +1,57 @@
+/* src/pages/skills.tsx */
 const Skills = () => {
   return (
-    <div>
-      <h1>Skills Page</h1>
-      <p>Details about skills...</p>
+    <div className="skills-page">
+      <h1 className="skills-title">Skills</h1>
+      <p className="skills-intro">
+        I possess a diverse range of technical skills, focused on web design, development, and database management. I am continually learning to grow into a well-rounded developer. Here are my key skills:
+      </p>
+
+      <div className="skills-list">
+        <div className="skills-item">
+          <h2>Web Design & Development</h2>
+          <p>
+            Proficient in designing and developing websites using HTML, CSS, JavaScript, and React. Experience with Bootstrap for responsive design and TailwindCSS for custom styling.
+          </p>
+        </div>
+
+        <div className="skills-item reverse">
+          <h2>Database Management</h2>
+          <p>
+            Skilled in creating and managing MySQL databases. I design structures, perform queries, and ensure data integrity for apps.
+          </p>
+        </div>
+
+        <div className="skills-item">
+          <h2>Programming & Coding</h2>
+          <p>
+            Strong foundation in JavaScript, TypeScript, and Python. Experience with Django for backend development and full-stack projects.
+          </p>
+        </div>
+
+        <div className="skills-item reverse">
+          <h2>Troubleshooting & Solutions Deployment</h2>
+          <p>
+            Skilled at debugging code, solving problems, and deploying solutions using Git, GitHub, and various platforms.
+          </p>
+        </div>
+
+        <div className="skills-item">
+          <h2>Version Control</h2>
+          <p>
+            Experienced with Git and GitHub for managing code repositories, collaborating with teams, and maintaining code integrity.
+          </p>
+        </div>
+
+        <div className="skills-item reverse">
+          <h2>Other Skills</h2>
+          <ul>
+            <li>Time management, meeting deadlines</li>
+            <li>Fluent in English and Kiswahili (written and spoken)</li>
+            <li>Collaboration and teamwork in dynamic environments</li>
+          </ul>
+        </div>
+      </div>
     </div>
   );
 };
