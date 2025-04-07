@@ -1,14 +1,12 @@
-import '../styles/globals.css';  // Import global CSS if necessary
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+// src/pages/_app.tsx
+import Layout from '../components/Layout';
+import '../styles/globals.css'; // Global styles
 
 const MyApp = ({ Component, pageProps }) => {
   return (
-    <>
-      <Navbar />     {/* Global Navbar */}
-      <Component {...pageProps} />  {/* Render the content of each page */}
-      <Footer />     {/* Global Footer */}
-    </>
+    <Layout>
+      <Component {...pageProps} />
+    </Layout>
   );
 };
 
