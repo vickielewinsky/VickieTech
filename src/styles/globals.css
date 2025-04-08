@@ -1,5 +1,3 @@
-/* src/styles/globals.css */
-
 /* Set the background color for the whole page */
 body {
   background-color: #ffffff; /* White background across all pages */
@@ -97,9 +95,101 @@ section:nth-child(odd) {
 /* Styling for the section titles (h2) */
 h2 {
   font-size: 2rem;
-  color: #222;
   margin-bottom: 20px;
   font-weight: 700;
+}
+
+/* Home page title */
+.home-title {
+  color: #2E8B57; /* Sea green */
+}
+
+/* About page title */
+.about-title {
+  color: #FF6347; /* Tomato */
+}
+
+/* Skills page title */
+.skills-title {
+  color: #1E90FF; /* Dodger blue */
+}
+
+/* Contact page title */
+.contact-title {
+  color: #8A2BE2; /* Blue violet */
+}
+
+/* About Page Styles */
+.about-page {
+  padding: 50px;
+  text-align: center;
+}
+
+.about-title {
+  color: #FF6347; /* Tomato color for About page title */
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.about-intro {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 40px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.about-item {
+  width: 30%;
+  margin-bottom: 30px;
+}
+
+.about-item h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333; /* Dark color for headings */
+}
+
+.about-item p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555; /* Lighter gray for text */
+}
+
+/* Responsive design for About page */
+@media (max-width: 768px) {
+  .about-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-item {
+    width: 80%;
+  }
+
+  .about-title {
+    font-size: 2rem;
+  }
+
+  .about-intro {
+    font-size: 1.1rem;
+  }
+
+  .about-item h2 {
+    font-size: 1.5rem;
+  }
+
+  .about-item p {
+    font-size: 1rem;
+  }
 }
 
 /* Skills Page Styles */
@@ -108,37 +198,37 @@ h2 {
   text-align: center;
 }
 
-.skills-title {
-  font-size: 3rem;
-  margin-bottom: 20px;
-}
-
 .skills-intro {
   font-size: 1.5rem;
   margin-bottom: 40px;
+  line-height: 1.6;
 }
 
 .skills-list {
   margin-top: 40px;
 }
 
+/* Fixing alignment of skill items */
 .skills-item {
   display: flex;
+  flex-direction: column; /* Ensure subtitle is above description */
   justify-content: flex-start;
   align-items: center;
   margin-bottom: 30px;
   font-size: 1.2rem;
+  text-align: left; /* Align text left for better readability */
 }
 
 .skills-item.reverse {
-  flex-direction: row-reverse;
-  text-align: right;
+  flex-direction: column; /* No reverse for clarity */
+  text-align: left; /* Make sure text is left-aligned for reverse items */
 }
 
 .skills-item h2 {
   font-size: 2rem;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 10px; /* Adjust spacing between subtitle and description */
+  color: #1E90FF; /* Dodger blue for subtitles */
 }
 
 .skills-item p,
@@ -165,11 +255,6 @@ h2 {
   text-align: center;
 }
 
-.contact-title {
-  font-size: 3rem;
-  margin-bottom: 20px;
-}
-
 .contact-info {
   margin-top: 20px;
 }
@@ -189,7 +274,7 @@ h2 {
   color: #0073b1; /* LinkedIn blue color */
   text-decoration: none;
   font-weight: bold;
-  cursor: pointer; /* Add this to change the cursor to a hand */
+  cursor: pointer;
 }
 
 .contact-info a:hover {
@@ -206,7 +291,8 @@ h2 {
   }
 
   .skills-item.reverse {
-    flex-direction: column;
+    flex-direction: column; /* Reverse the column layout */
+    text-align: left;
   }
 
   .skills-item h2 {
@@ -217,8 +303,198 @@ h2 {
   .skills-item ul {
     font-size: 1rem;
   }
+}
 
-  .contact-info li {
-    font-size: 1rem;
+/* Home page specific styles */
+.homeContainer {
+  text-align: center;
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.mainTitle {
+  font-size: 3rem;
+  color: #007BFF; /* Bright blue */
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.introText {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+.name {
+  font-weight: 600;
+  color: #007BFF; /* Bright blue */
+}
+
+.highlight {
+  color: #FFD700; /* Gold */
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+.highlight:hover {
+  color: #ff6f61; /* Warm red on hover */
+}
+
+.imageWrapper {
+  margin: 30px 0;
+}
+
+.profileImage {
+  border-radius: 50%;
+  border: 5px solid #007BFF; /* Blue border */
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.profileImage:hover {
+  transform: scale(1.1); /* Zoom effect on hover */
+}
+
+.description {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #666;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cta {
+  margin-top: 40px;
+}
+
+.ctaText {
+  font-size: 1.2rem;
+}
+
+.ctaLink {
+  color: #007BFF;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+.ctaLink:hover {
+  color: #ff6f61; /* Hover color for CTA link */
+}
+
+/* Button Styles */
+
+/* Basic Button Styling */
+button {
+  padding: 12px 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Submit Button */
+.submit-btn {
+  background-color: #007BFF; /* Bright blue */
+  color: #fff;
+}
+
+.submit-btn:hover {
+  background-color: #0056b3; /* Darker blue */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Contact Button (for links or contact action) */
+.contact-link {
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: #007BFF;
+  transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+/* Focused Input Styles (button focus) */
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); /* Focus ring for accessibility */
+}
+
+/* Responsive Button (for smaller screens) */
+@media (max-width: 768px) {
+  button {
+    width: 100%; /* Make buttons take up full width on mobile */
+    padding: 15px 20px;
   }
+}
+
+/* Form Section */
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Input and Textarea Styles */
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 20px; /* Adds space between fields */
+  transition: border-color 0.3s ease;
+}
+
+/* Add space between each label and input/textarea */
+label {
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  border-color: #007BFF; /* Blue border on focus */
+  outline: none;
+}
+
+/* Submit Button Style (form submit) */
+input[type="submit"] {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+input[type="submit"]:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
 }
