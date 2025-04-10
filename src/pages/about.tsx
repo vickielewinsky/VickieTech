@@ -5,8 +5,8 @@ const About: React.FC = () => {
     <div className="about-page">
       <h1 className="about-title">About Me</h1>
       <p className="about-intro">
-        I'm a passionate web developer with a strong foundation in front-end and back-end technologies. 
-        I'm constantly learning new skills and strive to improve my technical expertise. I believe in the power of 
+        I&apos;m a passionate web developer with a strong foundation in front-end and back-end technologies. 
+        I&apos;m constantly learning new skills and strive to improve my technical expertise. I believe in the power of 
         technology to solve real-world problems and am excited to be part of this ever-evolving field.
       </p>
 
