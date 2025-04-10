@@ -1,0 +1,72 @@
+/* Common.module.css */
+
+/* Universal container for each page */
+.pageContainer {
+    background-color: #f4f4f4;
+    padding: 40px;
+    margin: 20px auto;
+    border-radius: 8px;
+    max-width: 1200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers content horizontally */
+    justify-content: center; /* Centers content vertically */
+}
+
+/* Universal styles for all h2 titles */
+.h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;  /* Center align text */
+    color: #eb710e;  /* Default color */
+}
+
+/* Web Development Section */
+.webDevelopment h2 {
+    color: #1e40af; /* Blue */
+}
+
+/* Coding Section */
+.coding h2 {
+    color: #d97706; /* Orange */
+}
+
+/* Troubleshooting Section */
+.h2 {
+    color: #9b1d20; /* Red */
+}
+
+/* Database Management Section */
+.database-management h2 {
+    color: #047857; /* Green */
+}
+
+/* Text paragraph styles */
+.text {
+    font-size: 1.1rem;
+    color: #151515ef;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    padding: 0 20px;
+    text-align: center; /* Center align text for paragraphs */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .pageContainer {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    .h2 {
+        font-size: 1.8rem;  /* Adjust font size for h2 on smaller screens */
+        color: #d97706;
+    }
+
+    .text {
+        font-size: 1rem;
+    }
+}

@@ -1,4 +1,6 @@
-/* Navbar styles */
+/* Navbar.module.css */
+
+/* Main Navbar container */
 .navbar {
   background-color: #1e3a8a; /* bluish */
   padding: 20px 30px;
@@ -8,8 +10,13 @@
   z-index: 999;
   text-align: center;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
+/* Logo styles */
 .logo a {
   color: #ffffff;
   font-size: 2rem;
@@ -21,17 +28,18 @@
   margin-bottom: 10px;
 }
 
-/* Spacing between navbar items */
+/* Navigation list */
 .navList {
   list-style: none;
   display: flex;
   justify-content: center;
-  gap: 40px;  /* Increased gap for more space between links */
+  gap: 40px;
   padding: 0;
   margin: 0;
   flex-wrap: wrap;
 }
 
+/* Nav links */
 .navList li a {
   color: #ffffff;
   font-size: 1.2rem;
@@ -42,7 +50,7 @@
   transition: color 0.3s ease;
 }
 
-/* Underline animation effect on hover */
+/* Hover underline effect */
 .navList li a::after {
   content: '';
   position: absolute;
@@ -62,11 +70,70 @@
   width: 100%;
 }
 
-/* Responsive: Stack nav links on small screens */
+/* Dropdown Menu */
+.dropdown {
+  position: relative;
+}
+
+.servicesLink {
+  color: white !important; /* Force the "Services" text to be white */
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.dropdownMenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #2d6a4f; /* greenish */
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown:hover .dropdownMenu {
+  display: block;
+}
+
+.dropdownMenu li {
+  padding: 0.5rem 1rem;
+  text-transform: lowercase; /* Apply lowercase text only in the browser */
+}
+
+.dropdownMenu li a {
+  color: #f0f0f0; /* Lighter color for better visibility */
+  text-decoration: none;
+}
+
+.dropdownMenu li a:hover {
+  background-color: #facc15; /* yellow-400 */
+  color: #1e3a8a; /* bluish for text contrast */
+}
+
+/* Language Toggle Button */
+.languageToggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease;
+}
+
+.languageToggle:hover {
+  color: #facc15; /* yellow-400 */
+}
+
+/* Responsive nav for small screens */
 @media (max-width: 600px) {
   .navList {
     flex-direction: column;
-    gap: 20px; /* Adjusted gap on small screens */
+    gap: 20px;
   }
 
   .logo a {

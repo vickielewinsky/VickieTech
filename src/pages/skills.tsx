@@ -51,6 +51,24 @@ const Skills = () => {
             <li>Collaboration and teamwork in dynamic environments</li>
           </ul>
         </div>
+
+        {/* Swahilipot Hub Section */}
+        <div className="skills-item">
+          <h2>Swahilipot Hub Foundation</h2>
+          <p>
+            I gained hands-on experience in tech projects. I practiced frontend and backend development.
+          </p>
+          <p>
+            I improved my Git and GitHub skills. I also learned how to work in a team and meet deadlines.
+          </p>
+          <p>
+            My communication got better through daily interactions and group work.
+          </p>
+          <p>
+            I sincerely thank Swahilipot Hub Foundation for providing a supportive environment that helped me grow and sharpen my technical and interpersonal skills.
+          </p>
+          <img src="/image.png" alt="Swahilipot Hub Proof" className="skills-proof-img" />
+        </div>
       </div>
     </div>
   );

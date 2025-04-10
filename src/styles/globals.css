@@ -1,10 +1,10 @@
-/* Set the background color for the whole page */
+/* ------------------- Base Styles ------------------- */
 body {
-  background-color: #ffffff; /* White background across all pages */
+  background-color: #ffffff;
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  color: #333333; /* Default text color */
+  color: #333333;
   box-sizing: border-box;
   scroll-behavior: smooth;
   min-height: 100vh;
@@ -12,21 +12,11 @@ body {
   flex-direction: column;
 }
 
-/* Main content should grow to take up available space */
 main {
   flex-grow: 1;
 }
 
-/* Footer styles */
-.footer {
-  background-color: #333;
-  color: #dcdcdc;
-  text-align: center;
-  padding: 20px 0;
-  margin-top: auto;
-}
-
-/* Navbar styles */
+/* ------------------- Navbar ------------------- */
 .navbar {
   background-color: #333;
   padding: 10px 20px;
@@ -60,7 +50,6 @@ main {
   text-decoration: underline;
 }
 
-/* Make navbar items stack vertically on smaller screens */
 @media (max-width: 768px) {
   .navList {
     flex-direction: column;
@@ -72,7 +61,7 @@ main {
   }
 }
 
-/* Universal section styles */
+/* ------------------- Sections ------------------- */
 section {
   padding: 50px 0;
   text-align: center;
@@ -92,43 +81,31 @@ section:nth-child(odd) {
   color: #333;
 }
 
-/* Styling for the section titles (h2) */
+/* ------------------- Titles ------------------- */
 h2 {
   font-size: 2rem;
   margin-bottom: 20px;
   font-weight: 700;
 }
 
-/* Home page title */
-.home-title {
-  color: #2E8B57; /* Sea green */
+.home-title { color: #2E8B57; }
+.about-title { color: #FF6347; }
+.skills-title { color: #1E90FF; }
+.contact-title { color: #8A2BE2; }
+
+/* ------------------- Footer ------------------- */
+.footer {
+  background-color: #333;
+  color: #dcdcdc;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: auto;
 }
 
-/* About page title */
-.about-title {
-  color: #FF6347; /* Tomato */
-}
-
-/* Skills page title */
-.skills-title {
-  color: #1E90FF; /* Dodger blue */
-}
-
-/* Contact page title */
-.contact-title {
-  color: #8A2BE2; /* Blue violet */
-}
-
-/* About Page Styles */
+/* ------------------- About Page ------------------- */
 .about-page {
   padding: 50px;
   text-align: center;
-}
-
-.about-title {
-  color: #FF6347; /* Tomato color for About page title */
-  font-size: 2.5rem;
-  margin-bottom: 20px;
 }
 
 .about-intro {
@@ -155,16 +132,15 @@ h2 {
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 10px;
-  color: #333; /* Dark color for headings */
+  color: #333;
 }
 
 .about-item p {
   font-size: 1.1rem;
   line-height: 1.6;
-  color: #555; /* Lighter gray for text */
+  color: #555;
 }
 
-/* Responsive design for About page */
 @media (max-width: 768px) {
   .about-list {
     flex-direction: column;
@@ -192,7 +168,7 @@ h2 {
   }
 }
 
-/* Skills Page Styles */
+/* ------------------- Skills Page ------------------- */
 .skills-page {
   padding: 50px;
   text-align: center;
@@ -208,27 +184,26 @@ h2 {
   margin-top: 40px;
 }
 
-/* Fixing alignment of skill items */
 .skills-item {
   display: flex;
-  flex-direction: column; /* Ensure subtitle is above description */
+  flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   margin-bottom: 30px;
   font-size: 1.2rem;
-  text-align: left; /* Align text left for better readability */
+  text-align: left;
 }
 
 .skills-item.reverse {
-  flex-direction: column; /* No reverse for clarity */
-  text-align: left; /* Make sure text is left-aligned for reverse items */
+  flex-direction: column;
+  text-align: left;
 }
 
 .skills-item h2 {
   font-size: 2rem;
   font-weight: bold;
-  margin-bottom: 10px; /* Adjust spacing between subtitle and description */
-  color: #1E90FF; /* Dodger blue for subtitles */
+  margin-bottom: 10px;
+  color: #1e38ff;
 }
 
 .skills-item p,
@@ -249,7 +224,95 @@ h2 {
   margin: 10px 0;
 }
 
-/* Contact Page Styles */
+.skills-proof-img {
+  margin-top: 1rem;
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+  .skills-item {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .skills-item h2 {
+    font-size: 1.8rem;
+  }
+
+  .skills-item p,
+  .skills-item ul {
+    font-size: 1rem;
+  }
+}
+
+/* ------------------- Home Page ------------------- */
+.homeContainer {
+  text-align: center;
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.mainTitle {
+  font-size: 3rem;
+  color: #007BFF;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.introText {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+.name {
+  font-weight: 600;
+  color: #007BFF;
+}
+
+.highlight {
+  color: #FFD700;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+.highlight:hover {
+  color: #ff6f61;
+}
+
+.imageWrapper {
+  margin: 30px 0;
+}
+
+.profileImage {
+  border-radius: 50%;
+  border: 5px solid #007BFF;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.profileImage:hover {
+  transform: scale(1.1);
+}
+
+.description {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #666;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* ------------------- Contact Page ------------------- */
 .contact-page {
   padding: 50px;
   text-align: center;
@@ -269,232 +332,70 @@ h2 {
   font-size: 1.2rem;
 }
 
-/* Contact page link styles */
 .contact-info a {
-  color: #0073b1; /* LinkedIn blue color */
+  color: #0073b1;
   text-decoration: none;
   font-weight: bold;
   cursor: pointer;
 }
 
 .contact-info a:hover {
-  color: #005582; /* Darker blue on hover */
+  color: #005582;
   text-decoration: underline;
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
-  .skills-item {
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-  }
-
-  .skills-item.reverse {
-    flex-direction: column; /* Reverse the column layout */
-    text-align: left;
-  }
-
-  .skills-item h2 {
-    font-size: 1.8rem;
-  }
-
-  .skills-item p,
-  .skills-item ul {
-    font-size: 1rem;
-  }
-}
-
-/* Home page specific styles */
-.homeContainer {
-  text-align: center;
-  padding: 60px 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-  background-color: #fff;
-  border-radius: 15px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
-
-.mainTitle {
-  font-size: 3rem;
-  color: #007BFF; /* Bright blue */
-  font-weight: bold;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-  letter-spacing: 2px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.introText {
-  font-size: 1.5rem;
-  margin-bottom: 30px;
-  color: #555;
-}
-
-.name {
-  font-weight: 600;
-  color: #007BFF; /* Bright blue */
-}
-
-.highlight {
-  color: #FFD700; /* Gold */
-  font-weight: bold;
-  transition: color 0.3s ease-in-out;
-}
-
-.highlight:hover {
-  color: #ff6f61; /* Warm red on hover */
-}
-
-.imageWrapper {
-  margin: 30px 0;
-}
-
-.profileImage {
-  border-radius: 50%;
-  border: 5px solid #007BFF; /* Blue border */
-  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
-}
-
-.profileImage:hover {
-  transform: scale(1.1); /* Zoom effect on hover */
-}
-
-.description {
-  font-size: 1.2rem;
-  line-height: 1.6;
-  color: #666;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.cta {
-  margin-top: 40px;
-}
-
-.ctaText {
-  font-size: 1.2rem;
-}
-
-.ctaLink {
-  color: #007BFF;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease-in-out;
-}
-
-.ctaLink:hover {
-  color: #ff6f61; /* Hover color for CTA link */
-}
-
-/* Button Styles */
-
-/* Basic Button Styling */
-button {
-  padding: 12px 25px;
-  font-size: 1rem;
-  font-weight: 600;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-/* Submit Button */
-.submit-btn {
-  background-color: #007BFF; /* Bright blue */
-  color: #fff;
-}
-
-.submit-btn:hover {
-  background-color: #0056b3; /* Darker blue */
-  transform: scale(1.05); /* Slight zoom effect */
-}
-
-/* Contact Button (for links or contact action) */
-.contact-link {
-  font-size: 1rem;
-  font-weight: 600;
-  text-decoration: none;
-  color: #007BFF;
-  transition: color 0.3s ease;
-}
-
-.contact-link:hover {
-  color: #0056b3;
-  text-decoration: underline;
-}
-
-/* Focused Input Styles (button focus) */
-button:focus {
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); /* Focus ring for accessibility */
-}
-
-/* Responsive Button (for smaller screens) */
-@media (max-width: 768px) {
-  button {
-    width: 100%; /* Make buttons take up full width on mobile */
-    padding: 15px 20px;
-  }
-}
-
-/* Form Section */
+/* ------------------- Contact Form ------------------- */
 form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
   max-width: 600px;
   margin: 0 auto;
-  padding: 30px;
-  background-color: #f9f9f9;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Input and Textarea Styles */
-input[type="text"],
-input[type="email"],
-textarea {
+form label {
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  display: block;
+}
+
+form input,
+form textarea {
   width: 100%;
-  padding: 12px;
-  font-size: 1rem;
+  padding: 0.8rem;
   border: 1px solid #ccc;
   border-radius: 8px;
-  margin-bottom: 20px; /* Adds space between fields */
-  transition: border-color 0.3s ease;
+  font-size: 1rem;
+  background-color: #fff;
+  transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-/* Add space between each label and input/textarea */
-label {
-  margin-bottom: 8px;
-  font-size: 1.1rem;
-  font-weight: 600;
-}
-
-input[type="text"]:focus,
-input[type="email"]:focus,
-textarea:focus {
-  border-color: #007BFF; /* Blue border on focus */
+form input:focus,
+form textarea:focus {
   outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.15rem rgba(0, 123, 255, 0.25);
 }
 
-/* Submit Button Style (form submit) */
-input[type="submit"] {
-  background-color: #007BFF;
+form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+button[type="submit"] {
+  background-color: #007bff;
   color: white;
+  padding: 0.6rem 2rem;
   border: none;
-  padding: 12px 30px;
-  font-size: 1.2rem;
-  border-radius: 8px;
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 600;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  align-self: center;
 }
 
-input[type="submit"]:hover {
+button[type="submit"]:hover {
   background-color: #0056b3;
 }
 
-input[type="submit"]:focus {
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
-}
